@@ -12,11 +12,13 @@ class Movie
 {
     public $name;
     public $description;
+    public $genre;
 
-    public function __construct($name, $description)
+    public function __construct($name, $description, $genre)
     {
         $this->name = $name;
         $this->description = $description;
+        $this->genre = $genre;
     }
 
     public function movieName()
@@ -27,12 +29,16 @@ class Movie
     {
         return $this->description;
     }
+    public function movieGenre()
+    {
+        return $this->genre;
+    }
 };
 
 
 
-$inception = new Movie('Inception', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, delectus.');
-$shrek = new Movie('Shrek', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, tempora!');
+$inception = new Movie('Inception', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, delectus.', 'Thriller');
+$shrek = new Movie('Shrek', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, tempora!', 'Psychological Horror');
 
 ?>
 
@@ -59,6 +65,9 @@ $shrek = new Movie('Shrek', 'Lorem ipsum dolor sit amet consectetur, adipisicing
         <span>
             Description = <?php echo $inception->movieDesc() ?>
         </span>
+        <span>
+            Genre = <?php echo $inception->movieGenre() ?>
+        </span>
     </div>
     <div>
         <span>
@@ -66,6 +75,9 @@ $shrek = new Movie('Shrek', 'Lorem ipsum dolor sit amet consectetur, adipisicing
         </span>
         <span>
             Description = <?php echo $shrek->movieDesc() ?>
+        </span>
+        <span>
+            Genre = <?php echo $shrek->movieGenre() ?>
         </span>
     </div>
 
