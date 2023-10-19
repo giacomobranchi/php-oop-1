@@ -56,29 +56,38 @@ $shrek = new Movie('Shrek', 'Lorem ipsum dolor sit amet consectetur, adipisicing
 
 </head>
 
-<body>
+<body style="background-color: #333;">
 
     <div>
-        <span>
-            Title = <?php echo $inception->movieName() ?>
-        </span>
-        <span>
-            Description = <?php echo $inception->movieDesc() ?>
-        </span>
-        <span>
-            Genre = <?php echo $inception->movieGenre() ?>
-        </span>
-    </div>
-    <div>
-        <span>
-            Title = <?php echo $shrek->movieName() ?>
-        </span>
-        <span>
-            Description = <?php echo $shrek->movieDesc() ?>
-        </span>
-        <span>
-            Genre = <?php echo $shrek->movieGenre() ?>
-        </span>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-center ">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center "><?php echo $inception->movieName() ?></h5>
+                            <strong>Description</strong>
+                            <p class="card-text"><?php echo $inception->movieDesc() ?></p>
+                            <strong>Genre</strong>
+                            <p><?php echo $inception->movieGenre() ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center "><?php echo $shrek->movieName() ?></h5>
+                            <strong>Description</strong>
+                            <p class="card-text"><?php echo $shrek->movieDesc() ?></p>
+                            <strong>Genre</strong>
+                            <p><?php echo $shrek->movieGenre() ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
     </div>
 
 
